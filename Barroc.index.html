@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<base target="_parent">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Art del Barroc a Europa</title>
+<meta name="description" content="Recurs educatiu interactiu sobre l'art barroc a Europa: Itàlia, Flandes, Províncies Unides i Espanya.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{
+    --bg:#fbf7f0; --ink:#2b1d12; --muted:#6b5b48;
+    --gold:#b8893b; --gold-deep:#8a5a1f; --wine:#6b1f1f;
+    --card:#fffdf8; --line:#e7dcc8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0 0 .5em}
+  h1{font-size:clamp(2rem,5vw,3.4rem)}
+  h2{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--gold-deep)}
+  h3{font-size:1.25rem;color:var(--wine)}
+  p{margin:0 0 1em}
+  a{color:var(--gold-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+  .hero{
+    background:
+      linear-gradient(rgba(20,10,5,.65),rgba(20,10,5,.65)),
+      url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1600') center/cover;
+    color:#fff8e7;text-align:center;padding:5rem 1.25rem;
+  }
+  .hero h1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .hero p{color:#f3e7c8;font-size:1.15rem;max-width:640px;margin:0 auto}
+  nav.toc{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem}
+  nav.toc a{
+    background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);
+    padding:.55rem 1rem;border-radius:999px;font-size:.95rem;backdrop-filter:blur(4px);
+    transition:all .2s;
+  }
+  nav.toc a:hover{background:var(--gold);border-color:var(--gold);text-decoration:none}
+  section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.75rem;box-shadow:0 4px 18px rgba(122,80,30,.06)}
+  .grid{display:grid;gap:1.25rem}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .pill{display:inline-block;background:var(--gold);color:#fff;font-size:.8rem;padding:.25rem .7rem;border-radius:999px;margin-bottom:.5rem;font-weight:500}
+  ul.clean{list-style:none;padding:0;margin:0}
+  ul.clean li{padding:.5rem 0 .5rem 1.6rem;position:relative;border-bottom:1px dashed var(--line)}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:"❖";position:absolute;left:0;color:var(--gold)}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+  th,td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem;vertical-align:top}
+  th{background:var(--gold-deep);color:#fff;font-weight:600;font-family:'Playfair Display',serif}
+  tr:last-child td{border-bottom:none}
+  tr:nth-child(even) td{background:#fbf6ea}
+  .quote{border-left:4px solid var(--gold);background:#fdf6e3;padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-style:italic;color:var(--muted)}
+  .region-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
+  .flag{font-size:2.5rem;line-height:1}
+  footer{background:#2b1d12;color:#e7dcc8;padding:2.5rem 1.25rem;text-align:center;font-size:.9rem}
+  footer a{color:var(--gold)}
+  .anchor{display:block;position:relative;top:-20px;visibility:hidden}
+  @media (max-width:600px){
+    .hero{padding:3.5rem 1rem}
+    section{padding:2.5rem 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>🏛️ L'Art del Barroc a Europa</h1>
+  <p>Un viatge per l'art del segle XVII a través d'Itàlia, Flandes, les Províncies Unides i Espanya.</p>
+  <nav class="toc">
+    <a href="#intro">📜 Introducció</a>
+    <a href="#italia">🇮🇹 Itàlia</a>
+    <a href="#holanda">🇳🇱 Províncies Unides</a>
+    <a href="#flandes">🇧🇪 Flandes</a>
+    <a href="#espanya">🇪🇸 Espanya</a>
+    <a href="#conclusions">📝 Conclusions</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section id="intro">
+    <span class="anchor"></span>
+    <h2>Benvinguts al Barroc Europeu</h2>
+    <p>L'art barroc (aproximadament <strong>1600–1750</strong>) va néixer com a resposta a la Reforma Protestant i la Contrareforma Catòlica. Es caracteritza per la <strong>dramatització</strong>, el moviment, el contrast de llums i ombres (clarobscur) i la voluntat d'<em>emocionar i impressionar</em> l'espectador.</p>
+    <p>A diferència del Renaixement, que buscava l'equilibri i la proporció ideal, el Barroc cerca l'emoció, el dinamisme i l'impacte visual immediat.</p>
+
+    <div class="card" style="margin-top:1.5rem">
+      <h3>🗺️ Principals focus artístics</h3>
+      <ul class="clean">
+        <li><strong>Itàlia (Roma):</strong> centre del Barroc catòlic, amb arquitectura i escultura monumental.</li>
+        <li><strong>Províncies Unides:</strong> art burgès, paisatges i escenes quotidianes.</li>
+        <li><strong>Flandes:</strong> Barroc exuberant i colorista, influït per la Contrareforma.</li>
+        <li><strong>Espanya:</strong> Barroc profundament religiós i realista.</li>
+      </ul>
+    </div>
+
+    <h3 style="margin-top:2.5rem">⏳ Cronologia</h3>
+    <table>
+      <thead><tr><th>Període</th><th>Esdeveniments clau</th><th>Artistes representatius</th></tr></thead>
+      <tbody>
+        <tr><td>1600–1625</td><td>Inici del Barroc a Roma. Contrareforma.</td><td>Caravaggio, Annibale Carracci</td></tr>
+        <tr><td>1625–1650</td><td>Expansió europea. Edat d'Or holandès.</td><td>Bernini, Rubens, Velázquez</td></tr>
+        <tr><td>1650–1700</td><td>Apogeu del Barroc. Lluís XIV a França.</td><td>Rembrandt, Vermeer, Murillo</td></tr>
+        <tr><td>1700–1750</td><td>Barroc tardà i transició al Rococó.</td><td>Tiepolo, Churriguera</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="italia">
+    <span class="anchor"></span>
+    <div class="region-head"><span class="flag">🇮🇹</span><h2 style="margin:0">Itàlia: el cor del Barroc catòlic</h2></div>
+    <p>Itàlia, i especialment <strong>Roma</strong>, esdevé el centre neuràlgic del Barroc catòlic. L'Església utilitza l'art com a eina de propaganda per a la Contrareforma, generant obres d'una grandiositat i emotivitat sense precedents.</p>
+
+    <div class="grid grid-3" style="margin-top:1.5rem">
+      <div class="card">
+        <span class="pill">Arquitectura</span>
+        <h3>🏛️ Monumental i sorprenent</h3>
+        <p>Construccions monumentals, decoració exuberant, jocs de llum, plantes el·líptiques i corbes.</p>
+        <p><strong>Artistes:</strong> Gian Lorenzo Bernini (Columnata de Sant Pere), Francesco Borromini.</p>
+      </div>
+      <div class="card">
+        <span class="pill">Escultura</span>
+        <h3>🗿 Moviment i emoció</h3>
+        <p>Temes religiosos i mitològics, gran realisme, sensació de moviment, diàleg amb l'espai.</p>
+        <p><strong>Artista:</strong> Bernini (<em>Èxtasi de Santa Teresa</em>, <em>David</em>).</p>
+      </div>
+      <div class="card">
+        <span class="pill">Pintura</span>
+        <h3>🎨 Tenebrisme</h3>
+        <p>Ús dramàtic del clarobscur, realisme cru, escenes religioses, mitològiques i quotidianes.</p>
+        <p><strong>Artistes:</strong> Caravaggio, Artemisia Gentileschi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="holanda">
+    <span class="anchor"></span>
+    <div class="region-head"><span class="flag">🇳🇱</span><h2 style="margin:0">Províncies Unides: l'art de la burgesia</h2></div>
+    <p>A les Províncies Unides l'art es desvincula de l'Església catòlica i es posa al servei d'una societat <strong>burgesa, protestant i comercial</strong>. La pintura esdevé un producte de consum amb gran varietat de gèneres.</p>
+
+    <div class="grid grid-2" style="margin-top:1.5rem">
+      <div class="card">
+        <h3>Característiques principals</h3>
+        <ul class="clean">
+          <li><strong>Clients burgesos:</strong> comerciants rics, no l'Església ni la noblesa.</li>
+          <li><strong>Gèneres diversificats:</strong> retrats, paisatges, natures mortes, escenes quotidianes.</li>
+          <li><strong>Realisme i detall:</strong> precisió tècnica, textures i efectes de llum.</li>
+          <li><strong>Interiors domèstics:</strong> escenes íntimes amb llum suau de finestra.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Artistes destacats</h3>
+        <ul class="clean">
+          <li><strong>Rembrandt:</strong> <em>La ronda de nit</em>, autorretrats.</li>
+          <li><strong>Vermeer:</strong> <em>La noia de la perla</em>, <em>La lletera</em>.</li>
+          <li><strong>Frans Hals:</strong> retrats vivaços.</li>
+          <li><strong>Jacob van Ruisdael:</strong> mestre del paisatge.</li>
+        </ul>
+        <div class="quote" style="margin-top:1rem">💡 Rembrandt va fer més de 80 autorretrats: una crònica visual única del seu propi envelliment.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flandes">
+    <span class="anchor"></span>
+    <div class="region-head"><span class="flag">🇧🇪</span><h2 style="margin:0">Flandes: Barroc exuberant i colorista</h2></div>
+    <p>Flandes, sota domini espanyol i catòlic, desenvolupa un Barroc proper al model italià però amb caràcter propi: més <strong>sensual, colorista</strong> i orientat a exaltar la fe catòlica i el poder dels Habsburg.</p>
+
+    <div class="grid grid-2" style="margin-top:1.5rem">
+      <div class="card">
+        <h3>Característiques principals</h3>
+        <ul class="clean">
+          <li><strong>Riquesa cromàtica:</strong> colors vius, saturats i lluminosos.</li>
+          <li><strong>Dinamisme:</strong> composicions en espiral i diagonals.</li>
+          <li><strong>Temes religiosos i mitològics</strong> amb tractament sensual.</li>
+          <li><strong>Retrats d'aparat</strong> que exalten poder i estatus.</li>
+          <li><strong>Vanitas:</strong> natures mortes opulentes que reflexionen sobre la fugacitat.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Artistes destacats</h3>
+        <ul class="clean">
+          <li><strong>Peter Paul Rubens:</strong> <em>El descens de la creu</em>, <em>Les tres gràcies</em>.</li>
+          <li><strong>Anton van Dyck:</strong> retratista de la cort anglesa.</li>
+          <li><strong>Jacob Jordaens:</strong> escenes festives i populars.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="espanya">
+    <span class="anchor"></span>
+    <div class="region-head"><span class="flag">🇪🇸</span><h2 style="margin:0">Espanya: Barroc religiós i realista</h2></div>
+    <p>L'Espanya del <strong>Segle d'Or</strong> viu un Barroc profundament influït per la Contrareforma i el misticisme. L'art es posa al servei de la fe, amb un enfocament realista, dramàtic i sovint ascètic.</p>
+
+    <div class="grid grid-3" style="margin-top:1.5rem">
+      <div class="card">
+        <span class="pill">Arquitectura</span>
+        <h3>🏛️ Churrigueresc</h3>
+        <p>Materials senzills (maó, pedra) amb decoració exuberant concentrada en portades i retaules.</p>
+        <p><strong>Artistes:</strong> Pedro de Ribera, Fernando Casas Novoa.</p>
+      </div>
+      <div class="card">
+        <span class="pill">Escultura</span>
+        <h3>🗿 Imatgeria religiosa</h3>
+        <p>Fusta policromada amb efectes tàctils: llàgrimes de vidre, ulls de cristall, dramatisme intens.</p>
+        <p><strong>Artistes:</strong> Gregorio Fernández, Martínez Montañés, Pedro de Mena.</p>
+      </div>
+      <div class="card">
+        <span class="pill">Pintura</span>
+        <h3>🎨 Realisme i misticisme</h3>
+        <p>Tenebrisme, realisme sense idealització, retrats psicològics profunds.</p>
+        <p><strong>Artistes:</strong> Velázquez, Ribera, Zurbarán, Murillo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="conclusions">
+    <span class="anchor"></span>
+    <h2>📝 Conclusions</h2>
+    <p>El Barroc va ser molt més que un estil artístic: va ser l'expressió visual d'una època de grans conflictes i transformacions. Va servir com a eina de <strong>propaganda religiosa</strong> (Contrareforma), de <strong>glorificació del poder absolut</strong> (monarquies) i de <strong>celebració de la riquesa individual</strong> (burgesia).</p>
+
+    <h3 style="margin-top:2rem">Diferències regionals</h3>
+    <table>
+      <thead><tr><th>Regió</th><th>Característiques</th><th>Temàtica</th><th>Client</th></tr></thead>
+      <tbody>
+        <tr><td>🇮🇹 Itàlia</td><td>Monumental, dramàtic</td><td>Religiosa, mitològica</td><td>Església, papat</td></tr>
+        <tr><td>🇧🇪 Flandes</td><td>Colorista, sensual</td><td>Religiosa, mitològica</td><td>Església, noblesa</td></tr>
+        <tr><td>🇳🇱 Holanda</td><td>Realista, detallista</td><td>Quotidiana, paisatge</td><td>Burgesia</td></tr>
+        <tr><td>🇪🇸 Espanya</td><td>Místic, ascètic</td><td>Religiosa</td><td>Església, monarquia</td></tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-top:2rem">
+      <h3>💎 Importància del Barroc</h3>
+      <ul class="clean">
+        <li><strong>Pont entre el Renaixement i la Modernitat:</strong> trenca amb l'equilibri clàssic i anticipa el Romanticisme.</li>
+        <li><strong>Art total:</strong> integra arquitectura, escultura i pintura de manera orgànica.</li>
+        <li><strong>Globalització:</strong> s'estén a Amèrica Llatina, fusionant-se amb tradicions locals.</li>
+        <li><strong>Art burgès:</strong> a les Províncies Unides, l'art esdevé un producte de mercat.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>L'Art del Barroc a Europa</strong> · Recurs educatiu per a 4t d'ESO</p>
+  <p>Projecte dissenyat per a Google Sites · Contingut en català</p>
+</footer>
+
+</body>
+</html>
